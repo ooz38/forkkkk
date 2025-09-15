@@ -32,8 +32,7 @@ def get_driver(browser):
     elif browser.lower() in explorer:
         return webdriver.Ie(IEDriverManager().install())
 
-    elif browser.lower() in edge:
-        return webdriver.Edge(executable_path=EdgeChromiumDriverManager().install())
+    
 
     else:
         raise RuntimeError('Browser not found {}'.format(browser.lower()))
